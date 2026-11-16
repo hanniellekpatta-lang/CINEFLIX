@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinéFlix - Films et Séries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">CINÉFLIX</h1>
+
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#films">Films</a>
+        <a href="#series">Séries</a>
+        <a href="#favoris">Ma liste</a>
+    </nav>
+
+    <input type="text" id="search"
+           placeholder="Rechercher un film...">
+
+    <button class="login" onclick="alert('Page de connexion bientôt disponible !')">
+        Connexion
+    </button>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>LE CINÉMA À PORTÉE DE MAIN</h2>
+        <p>Découvrez des films et des séries incroyables.</p>
+        <button onclick="showDetails('Bienvenue sur CinéFlix')">
+            ▶ Découvrir
+        </button>
+    </div>
+</section>
+
+<main>
+    <h2 id="films">Films populaires</h2>
+
+    <div class="categories">
+        <button onclick="filterMovies('Tous')">Tous</button>
+        <button onclick="filterMovies('Action')">Action</button>
+        <button onclick="filterMovies('Romance')">Romance</button>
+        <button onclick="filterMovies('Comédie')">Comédie</button>
+    </div>
+
+    <div class="movie-container" id="movieList">
+
+        <div class="movie" data-category="Action">
+            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500"
+                 alt="Film d'action">
+            <h3>Mission secrète</h3>
+            <p>Action • 2026</p>
+            <button onclick="showDetails('Mission secrète')">
+                Voir le film
+            </button>
+        </div>
+
+        <div class="movie" data-category="Romance">
+            <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=500"
+                 alt="Film romantique">
+            <h3>Amour éternel</h3>
+            <p>Romance • 2026</p>
+            <button onclick="showDetails('Amour éternel')">
+                Voir le film
+            </button>
+        </div>
+
+        <div class="movie" data-category="Comédie">
+            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500"
+                 alt="Film comique">
+            <h3>Les aventures</h3>
+            <p>Comédie • 2026</p>
+            <button onclick="showDetails('Les aventures')">
+                Voir le film
+            </button>
+        </div>
+
+        <div class="movie" data-category="Action">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500"
+                 alt="Film aventure">
+            <h3>Le dernier voyage</h3>
+            <p>Action • 2026</p>
+            <button onclick="showDetails('Le dernier voyage')">
+                Voir le film
+            </button>
+        </div>
+
+    </div>
+
+    <h2 id="series">Séries à découvrir</h2>
+    <p class="coming">De nouvelles séries arrivent bientôt !</p>
+
+    <h2 id="favoris">Ma liste</h2>
+    <p class="coming">Tes films préférés apparaîtront ici.</p>
+</main>
+
+<footer>
+    <p>© 2026 CINÉFLIX - Tous droits réservés.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
